@@ -8,7 +8,18 @@ export default {
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
+    container: {
+      center: true,
+      padding: "2rem",
+      screens: {
+        "2xl": "1400px",
+      },
+    },
   	extend: {
+      fontFamily: {
+        sans: ["var(--font-inter)", "sans-serif"],
+        heading: ["var(--font-poppins)", "sans-serif"],
+      },
   		colors: {
   			background: 'hsl(var(--background))',
   			foreground: 'hsl(var(--foreground))',
@@ -50,16 +61,18 @@ export default {
   				'4': 'hsl(var(--chart-4))',
   				'5': 'hsl(var(--chart-5))'
   			},
-  			sidebar: {
-  				DEFAULT: 'hsl(var(--sidebar-background))',
-  				foreground: 'hsl(var(--sidebar-foreground))',
-  				primary: 'hsl(var(--sidebar-primary))',
-  				'primary-foreground': 'hsl(var(--sidebar-primary-foreground))',
-  				accent: 'hsl(var(--sidebar-accent))',
-  				'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
-  				border: 'hsl(var(--sidebar-border))',
-  				ring: 'hsl(var(--sidebar-ring))'
-  			}
+        // Sidebar colors updated to match new theme structure
+        // These might not be used if sidebar component is not part of the final page
+        sidebar: {
+          DEFAULT: 'hsl(var(--background))', // Sidebar bg same as main bg in dark theme for cohesion
+          foreground: 'hsl(var(--foreground))',
+          primary: 'hsl(var(--primary))',
+          'primary-foreground': 'hsl(var(--primary-foreground))',
+          accent: 'hsl(var(--accent))',
+          'accent-foreground': 'hsl(var(--accent-foreground))',
+          border: 'hsl(var(--border))',
+          ring: 'hsl(var(--ring))'
+        }
   		},
   		borderRadius: {
   			lg: 'var(--radius)',
