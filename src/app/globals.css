@@ -1,3 +1,4 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -28,8 +29,9 @@
     --font-sans: "--font-inter", sans-serif;
     --font-heading: "--font-poppins", sans-serif;
 
-    --gradient-start: 285 100% 60%; /* Lighter Electric Purple */
-    --gradient-end: 180 100% 60%; /* Lighter Teal */
+    /* Lighter, less saturated gradient for light mode */
+    --gradient-start: 285 80% 70%; 
+    --gradient-end: 180 80% 70%;
   }
 
   .dark {
@@ -53,8 +55,9 @@
     --input: 224 71% 15%;
     --ring: 128 100% 50%; /* Ring matches primary */
 
-    --gradient-start: 285 100% 50%; /* Electric Purple */
-    --gradient-end: 180 100% 50%; /* Teal */
+    /* Lighter, less saturated gradient for dark mode */
+    --gradient-start: 285 80% 55%;
+    --gradient-end: 180 80% 55%;
   }
 }
 
