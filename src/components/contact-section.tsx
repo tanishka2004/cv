@@ -107,8 +107,8 @@ export default function ContactSection() {
         </div>
          <div className="text-center mt-12">
             <p className="text-muted-foreground">Alternatively, you can reach out directly:</p>
-            <a href="mailto:tanishkagarg.dev@gmail.com" className="text-primary hover:underline font-medium text-lg">
-              tanishkagarg.dev@gmail.com
+            <a href="mailto:tanishkajain.dev@gmail.com" className="text-primary hover:underline font-medium text-lg">
+              tanishkajain.dev@gmail.com
             </a>
         </div>
       </div>

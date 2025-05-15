@@ -20,17 +20,17 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: 'DevSpark Portfolio | Tanishka Garg',
-  description: 'Full-Stack Developer & Pixel-Perfect Frontend Aficionado. Explore my projects and skills.',
+  title: 'DevSpark Portfolio | Tanishka Jain',
+  description: 'Web Developer, Data Analyst Enthusiast & Problem Solver. Explore my projects and skills.',
   openGraph: {
-    title: 'DevSpark Portfolio | Tanishka Garg',
-    description: 'Full-Stack Developer & Pixel-Perfect Frontend Aficionado.',
+    title: 'DevSpark Portfolio | Tanishka Jain',
+    description: 'Web Developer, Data Analyst Enthusiast & Problem Solver.',
     images: [
       {
-        url: 'https://placehold.co/1200x630.png?text=Tanishka+Garg+Portfolio', // Replace with actual OG image
+        url: 'https://placehold.co/1200x630.png?text=Tanishka+Jain+Portfolio', // Replace with actual OG image
         width: 1200,
         height: 630,
-        alt: 'Tanishka Garg Portfolio',
+        alt: 'Tanishka Jain Portfolio',
       },
     ],
   },

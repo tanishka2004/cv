@@ -6,8 +6,8 @@ import { Button } from '@/components/ui/button';
 import { ArrowDown, ChevronRight } from 'lucide-react';
 
 export default function HeroSection() {
-  const name = "Tanishka Garg";
-  const tagline = "Full‑Stack Developer & Pixel‑Perfect Frontend Aficionado";
+  const name = "Tanishka Jain";
+  const tagline = "Web Developer, Data Analyst Enthusiast & Problem Solver";
 
   return (
     <section id="hero" className="relative flex flex-col items-center justify-center min-h-screen animated-gradient-bg text-foreground p-4 sm:p-6 lg:p-8 overflow-hidden">
@@ -60,4 +60,3 @@ export default function HeroSection() {
     </section>
   );
 }
-
