@@ -1,3 +1,4 @@
+
 "use client";
 
 import Link from 'next/link';
@@ -9,7 +10,7 @@ export default function HeroSection() {
   const tagline = "Full‑Stack Developer & Pixel‑Perfect Frontend Aficionado";
 
   return (
-    <section id="hero" className="relative flex flex-col items-center justify-center min-h-screen animated-gradient-bg text-primary-foreground p-4 sm:p-6 lg:p-8 overflow-hidden">
+    <section id="hero" className="relative flex flex-col items-center justify-center min-h-screen animated-gradient-bg text-foreground p-4 sm:p-6 lg:p-8 overflow-hidden">
       <div className="absolute inset-0 bg-black/30 backdrop-blur-sm"></div> {/* Optional: subtle overlay for text readability */}
       <div className="relative z-10 text-center space-y-8">
         <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-extrabold tracking-tight">
@@ -19,7 +20,7 @@ export default function HeroSection() {
             </span>
           ))}
         </h1>
-        <p className="text-xl sm:text-2xl md:text-3xl text-primary-foreground/80 max-w-3xl mx-auto animate-fade-in-up" style={{ animationDelay: '0.5s' }}>
+        <p className="text-xl sm:text-2xl md:text-3xl text-foreground/80 max-w-3xl mx-auto animate-fade-in-up" style={{ animationDelay: '0.5s' }}>
           {tagline}
         </p>
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 animate-fade-in-up" style={{ animationDelay: '0.8s' }}>
@@ -28,7 +29,7 @@ export default function HeroSection() {
               View Work <ChevronRight className="ml-2 h-5 w-5" />
             </Link>
           </Button>
-          <Button variant="outline" size="lg" asChild className="border-primary-foreground/50 text-primary-foreground hover:bg-primary-foreground/10 shadow-lg transform hover:scale-105 transition-transform duration-300">
+          <Button variant="outline" size="lg" asChild className="border-foreground/50 text-foreground hover:bg-foreground/10 shadow-lg transform hover:scale-105 transition-transform duration-300">
             <Link href="#contact">
               Let&apos;s Chat <ChevronRight className="ml-2 h-5 w-5" />
             </Link>
@@ -37,7 +38,7 @@ export default function HeroSection() {
       </div>
       <div className="absolute bottom-10 left-1/2 -translate-x-1/2 z-10 animate-bounce">
         <Link href="#about" aria-label="Scroll to about section">
-          <ArrowDown className="h-8 w-8 text-primary-foreground/70 hover:text-primary-foreground transition-colors" />
+          <ArrowDown className="h-8 w-8 text-foreground/70 hover:text-foreground transition-colors" />
         </Link>
       </div>
       <style jsx>{`
@@ -59,3 +60,4 @@ export default function HeroSection() {
     </section>
   );
 }
+
