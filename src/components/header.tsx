@@ -37,7 +37,7 @@ export default function Header() {
 
           <nav className="hidden md:flex items-center space-x-2 lg:space-x-4">
             {navLinks.map((link) => (
-              <Button key={link.label} variant="ghost" asChild className="text-sm font-medium hover:text-primary">
+              <Button key={link.label} variant="ghost" asChild className="text-sm font-medium hover:text-foreground/80">
                 <Link href={link.href}>{link.label}</Link>
               </Button>
             ))}
@@ -61,7 +61,7 @@ export default function Header() {
                   </Link>
                   <nav className="flex flex-col space-y-4">
                     {navLinks.map((link) => (
-                      <Button key={link.label} variant="ghost" asChild className="text-lg justify-start hover:text-primary" onClick={() => setMobileMenuOpen(false)}>
+                      <Button key={link.label} variant="ghost" asChild className="text-lg justify-start hover:text-foreground/80" onClick={() => setMobileMenuOpen(false)}>
                         <Link href={link.href}>{link.label}</Link>
                       </Button>
                     ))}
