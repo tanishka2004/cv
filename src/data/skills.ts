@@ -1,7 +1,7 @@
 
 import type { Skill, SkillCategory } from '@/types';
 import {
-  CodeXml, Database, Code2, Palette, GitBranch, Server, Cloud, Layers, Wind, Terminal, Sigma, TableCells, GalleryThumbnails, HardDrive, MonitorSmartphone, Github, NotebookText, DraftingCompass, Blocks, Workflow, Shapes, Calculator, Chip, Network
+  CodeXml, Database, Code2, Palette, GitBranch, Server, Cloud, Layers, Wind, Terminal, Sigma, TableCells, GalleryThumbnails, HardDrive, MonitorSmartphone, Github, NotebookText, DraftingCompass, Blocks, Workflow, Shapes, Calculator, Chip, Network, FileCode2, Cpu // Added FileCode2 and Cpu
 } from 'lucide-react';
 
 export const skillsCategorizedData: SkillCategory[] = [
