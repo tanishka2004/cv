@@ -34,12 +34,11 @@ export default function Header() {
         <div className="flex items-center justify-between h-20">
           <Link href="#hero" className="flex items-center gap-2 group">
             <Image
-              src="https://placehold.co/40x40.png"
-              alt="DevSpark Logo"
-              width={32}
-              height={32}
-              className="rounded-full h-8 w-8 sm:h-10 sm:w-10 group-hover:opacity-80 transition-opacity"
-              data-ai-hint="developer avatar"
+              src="/avatar-logo.png" // Updated image source
+              alt="Tanishka Jain Logo"
+              width={40} // Adjusted size for better visual
+              height={40}
+              className="rounded-full h-10 w-10 sm:h-12 sm:w-12 group-hover:opacity-80 transition-opacity" // Adjusted size
             />
             {/* Optional: Keep DevSpark text next to avatar if desired, or remove it */}
             {/* <span className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary to-purple-500">DevSpark</span> */}
@@ -67,12 +66,11 @@ export default function Header() {
                   <div className="p-6">
                   <Link href="#hero" className="flex items-center gap-2 mb-8" onClick={() => setMobileMenuOpen(false)}>
                      <Image
-                        src="https://placehold.co/40x40.png"
-                        alt="DevSpark Logo"
+                        src="/avatar-logo.png" // Updated image source
+                        alt="Tanishka Jain Logo"
                         width={32}
                         height={32}
                         className="rounded-full h-8 w-8"
-                        data-ai-hint="developer avatar"
                       />
                      {/* Optional: Keep DevSpark text in mobile menu if desired */}
                      {/* <span className="text-2xl font-bold">DevSpark</span> */}
@@ -94,4 +92,3 @@ export default function Header() {
     </header>
   );
 }
-
