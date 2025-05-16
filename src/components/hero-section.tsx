@@ -4,10 +4,59 @@
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { ArrowDown, ChevronRight } from 'lucide-react';
+import { useState, useEffect } from 'react'; // Added for typing animation
 
 export default function HeroSection() {
   const name = "Tanishka Jain";
-  const tagline = "Web Developer, Data Analyst Enthusiast & Problem Solver";
+
+  // Typing animation states
+  const dynamicParts = [
+    "Web Developer",
+    "Data Analyst Enthusiast",
+    "Problem Solver"
+  ];
+  const [partIndex, setPartIndex] = useState(0);
+  const [currentText, setCurrentText] = useState('');
+  const [isDeleting, setIsDeleting] = useState(false);
+  const typingSpeed = 120; // milliseconds per character
+  const deletingSpeed = 70; // milliseconds per character
+  const pauseDuration = 1800; // milliseconds to pause after typing/deleting
+
+  useEffect(() => {
+    let timer;
+    const handleTyping = () => {
+      const fullText = dynamicParts[partIndex];
+      if (isDeleting) {
+        // Deleting phase
+        if (currentText.length > 0) {
+          timer = setTimeout(() => {
+            setCurrentText(fullText.substring(0, currentText.length - 1));
+          }, deletingSpeed);
+        } else {
+          // Finished deleting, move to next part
+          setIsDeleting(false);
+          setPartIndex((prevIndex) => (prevIndex + 1) % dynamicParts.length);
+        }
+      } else {
+        // Typing phase
+        if (currentText.length < fullText.length) {
+          timer = setTimeout(() => {
+            setCurrentText(fullText.substring(0, currentText.length + 1));
+          }, typingSpeed);
+        } else {
+          // Finished typing, pause then start deleting
+          timer = setTimeout(() => {
+            setIsDeleting(true);
+          }, pauseDuration);
+        }
+      }
+    };
+
+    handleTyping();
+    // Cleanup timer on component unmount or when dependencies change
+    return () => clearTimeout(timer);
+  }, [currentText, isDeleting, partIndex, dynamicParts, typingSpeed, deletingSpeed, pauseDuration]);
+
 
   return (
     <section id="hero" className="relative flex flex-col items-center justify-center min-h-screen animated-gradient-bg text-foreground p-4 sm:p-6 lg:p-8 overflow-hidden">
@@ -20,8 +69,10 @@ export default function HeroSection() {
             </span>
           ))}
         </h1>
-        <p className="text-xl sm:text-2xl md:text-3xl text-foreground/80 max-w-3xl mx-auto animate-fade-in-up" style={{ animationDelay: '0.5s' }}>
-          {tagline}
+        {/* Tagline with typing animation. Added min-height to reduce layout shift. */}
+        <p className="text-xl sm:text-2xl md:text-3xl text-foreground/80 max-w-3xl mx-auto animate-fade-in-up min-h-[3em] sm:min-h-[2.5em] md:min-h-[2em]" style={{ animationDelay: '0.5s' }}>
+          I&apos;m a <span className="font-semibold gradient-text">{currentText}</span>
+          <span className="inline-block w-0.5 h-7 sm:h-8 md:h-9 ml-1 bg-foreground/80 animate-blink align-bottom"></span>
         </p>
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 animate-fade-in-up" style={{ animationDelay: '0.8s' }}>
           <Button size="lg" asChild className="bg-primary hover:bg-primary/90 text-primary-foreground shadow-lg transform hover:scale-105 transition-transform duration-300">
@@ -55,6 +106,13 @@ export default function HeroSection() {
         .animate-fade-in-up {
           animation: fade-in-up 0.5s ease-out forwards;
           opacity: 0; /* Start hidden */
+        }
+        @keyframes blink {
+          0%, 100% { opacity: 1; }
+          50% { opacity: 0; }
+        }
+        .animate-blink {
+          animation: blink 0.75s step-end infinite;
         }
       `}</style>
     </section>
