@@ -1,3 +1,4 @@
+
 import type { LucideIcon } from 'lucide-react';
 
 export type Project = {
@@ -14,7 +15,7 @@ export type Project = {
 export type Skill = {
   name: string;
   icon: LucideIcon; // Or React.ElementType if using custom SVGs
-  level?: string; // e.g., 'Advanced', 'Intermediate'
+  level?: string; // e.g., 'Advanced', 'Intermediate' - Now optional
   description: string;
 };
 
@@ -26,3 +27,9 @@ export type Testimonial = {
   avatarUrl?: string;
   dataAiHint?: string;
 };
+
+// New type for categorized skills
+export interface SkillCategory {
+  categoryName: string;
+  skills: Skill[];
+}

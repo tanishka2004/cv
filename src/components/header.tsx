@@ -10,9 +10,9 @@ import React from 'react';
 
 const navLinks = [
   { label: 'Home', href: '#hero' },
-  { label: 'About', href: '#about' },
+  { label: 'About Me', href: '#about-me' },
+  { label: 'My Skills', href: '#skills' },
   { label: 'Projects', href: '#projects' },
-  { label: 'Testimonials', href: '#testimonials' },
   { label: 'Contact', href: '#contact' },
 ];
 
@@ -34,14 +34,12 @@ export default function Header() {
         <div className="flex items-center justify-between h-20">
           <Link href="#hero" className="flex items-center gap-2 group">
             <Image
-              src="/avatar-logo.png" // Updated image source
+              src="/avatar-logo.png"
               alt="Tanishka Jain Logo"
-              width={40} // Adjusted size for better visual
+              width={40}
               height={40}
-              className="rounded-full h-10 w-10 sm:h-12 sm:w-12 group-hover:opacity-80 transition-opacity" // Adjusted size
+              className="rounded-full h-10 w-10 sm:h-12 sm:w-12 group-hover:opacity-80 transition-opacity"
             />
-            {/* Optional: Keep DevSpark text next to avatar if desired, or remove it */}
-            {/* <span className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary to-purple-500">DevSpark</span> */}
           </Link>
 
           <nav className="hidden md:flex items-center space-x-2 lg:space-x-4">
@@ -66,14 +64,12 @@ export default function Header() {
                   <div className="p-6">
                   <Link href="#hero" className="flex items-center gap-2 mb-8" onClick={() => setMobileMenuOpen(false)}>
                      <Image
-                        src="/avatar-logo.png" // Updated image source
+                        src="/avatar-logo.png"
                         alt="Tanishka Jain Logo"
                         width={32}
                         height={32}
                         className="rounded-full h-8 w-8"
                       />
-                     {/* Optional: Keep DevSpark text in mobile menu if desired */}
-                     {/* <span className="text-2xl font-bold">DevSpark</span> */}
                   </Link>
                   <nav className="flex flex-col space-y-4">
                     {navLinks.map((link) => (
