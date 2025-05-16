@@ -1,8 +1,10 @@
+
 "use client";
 import Link from 'next/link';
+import Image from 'next/image';
 import { ThemeToggleButton } from './theme-toggle-button';
 import { Button } from './ui/button';
-import { Menu, Sparkles } from 'lucide-react';
+import { Menu } from 'lucide-react';
 import { Sheet, SheetContent, SheetTrigger } from './ui/sheet';
 import React from 'react';
 
@@ -30,9 +32,17 @@ export default function Header() {
     <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-background/80 backdrop-blur-md shadow-lg' : 'bg-transparent'}`}>
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
-          <Link href="#hero" className="flex items-center gap-2 text-2xl font-bold group">
-            <Sparkles className="h-7 w-7 text-primary group-hover:animate-pulse" />
-            <span className="bg-clip-text text-transparent bg-gradient-to-r from-primary to-purple-500">DevSpark</span>
+          <Link href="#hero" className="flex items-center gap-2 group">
+            <Image
+              src="https://placehold.co/40x40.png"
+              alt="DevSpark Logo"
+              width={32}
+              height={32}
+              className="rounded-full h-8 w-8 sm:h-10 sm:w-10 group-hover:opacity-80 transition-opacity"
+              data-ai-hint="developer avatar"
+            />
+            {/* Optional: Keep DevSpark text next to avatar if desired, or remove it */}
+            {/* <span className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary to-purple-500">DevSpark</span> */}
           </Link>
 
           <nav className="hidden md:flex items-center space-x-2 lg:space-x-4">
@@ -55,9 +65,17 @@ export default function Header() {
                 </SheetTrigger>
                 <SheetContent side="right" className="w-[280px] bg-background">
                   <div className="p-6">
-                  <Link href="#hero" className="flex items-center gap-2 text-2xl font-bold mb-8" onClick={() => setMobileMenuOpen(false)}>
-                     <Sparkles className="h-7 w-7 text-primary" />
-                     <span>DevSpark</span>
+                  <Link href="#hero" className="flex items-center gap-2 mb-8" onClick={() => setMobileMenuOpen(false)}>
+                     <Image
+                        src="https://placehold.co/40x40.png"
+                        alt="DevSpark Logo"
+                        width={32}
+                        height={32}
+                        className="rounded-full h-8 w-8"
+                        data-ai-hint="developer avatar"
+                      />
+                     {/* Optional: Keep DevSpark text in mobile menu if desired */}
+                     {/* <span className="text-2xl font-bold">DevSpark</span> */}
                   </Link>
                   <nav className="flex flex-col space-y-4">
                     {navLinks.map((link) => (
@@ -76,3 +94,4 @@ export default function Header() {
     </header>
   );
 }
+
