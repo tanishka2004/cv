@@ -1,7 +1,7 @@
 
 import type { Skill, SkillCategory } from '@/types';
 import {
-  CodeXml, Database, Code2, Palette, GitBranch, Server, Cloud, Layers, Wind, Terminal, Sigma, TableCells, GalleryThumbnails, HardDrive, MonitorSmartphone, Github, NotebookText, DraftingCompass, Blocks, Workflow, Shapes, Calculator, Chip, Network, FileCode2, Cpu // Added FileCode2 and Cpu
+  CodeXml, Database, Code2, Palette, GitBranch, Server, Cloud, Layers, Wind, Terminal, Sigma, TableCellsSplit, GalleryThumbnails, HardDrive, MonitorSmartphone, Github, NotebookText, DraftingCompass, Blocks, Workflow, Shapes, Calculator, Microchip, Network, FileCode2, Cpu // Replaced Chip with Microchip, TableCells with TableCellsSplit
 } from 'lucide-react';
 
 export const skillsCategorizedData: SkillCategory[] = [
@@ -23,7 +23,7 @@ export const skillsCategorizedData: SkillCategory[] = [
       { name: 'Next.js', icon: Layers, description: 'Full-stack React framework for server-rendering, static site generation, and more.', level: 'Advanced' },
       { name: 'Node.js', icon: Server, description: 'JavaScript runtime for building scalable server-side applications and APIs.', level: 'Intermediate' },
       { name: 'Numpy', icon: Sigma, description: 'Fundamental package for numerical computation in Python.', level: 'Intermediate' },
-      { name: 'Pandas', icon: TableCells, description: 'Powerful Python library for data manipulation and analysis.', level: 'Intermediate' },
+      { name: 'Pandas', icon: TableCellsSplit, description: 'Powerful Python library for data manipulation and analysis.', level: 'Intermediate' },
       { name: 'Tailwind CSS', icon: Wind, description: 'Utility-first CSS framework for rapid UI development.', level: 'Advanced' },
       { name: 'Bootstrap', icon: GalleryThumbnails, description: 'Popular CSS framework for responsive, mobile-first front-end web development.', level: 'Intermediate' },
       { name: 'Arduino', icon: HardDrive, description: 'Open-source electronics platform based on easy-to-use hardware and software.', level: 'Intermediate' },
@@ -46,7 +46,7 @@ export const skillsCategorizedData: SkillCategory[] = [
       { name: 'Algorithms', icon: Workflow, description: 'Designing and analyzing efficient problem-solving procedures.', level: 'Proficient' },
       { name: 'OOPs', icon: Shapes, description: 'Object-Oriented Programming principles for modular and reusable code.', level: 'Proficient' },
       { name: 'Discrete Mathematics', icon: Calculator, description: 'Mathematical structures that are fundamentally discrete rather than continuous.', level: 'Knowledgeable' },
-      { name: 'Microcontrollers', icon: Chip, description: 'Programming and interfacing with microcontroller-based systems.', level: 'Knowledgeable' },
+      { name: 'Microcontrollers', icon: Microchip, description: 'Programming and interfacing with microcontroller-based systems.', level: 'Knowledgeable' },
       { name: 'Computer System Org.', icon: Network, description: 'Understanding the basic structure and operation of digital computers.', level: 'Knowledgeable' },
     ]
   }
@@ -55,3 +55,4 @@ export const skillsCategorizedData: SkillCategory[] = [
 // Kept for potential future use or if other parts of the app still reference skillsData directly.
 // For the main skills display, skillsCategorizedData is now primary.
 export const skillsData: Skill[] = skillsCategorizedData.flatMap(category => category.skills);
+
