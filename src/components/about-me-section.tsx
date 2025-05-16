@@ -7,7 +7,7 @@ import { Download } from 'lucide-react';
 export default function AboutMeSection() {
   return (
     <section id="about-me" className="py-16 sm:py-24 bg-background">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="container mx-auto px-6 sm:px-8 lg:px-12">
         <div className="text-center mb-12">
           <h2 className="text-3xl sm:text-4xl font-bold tracking-tight">About <span className="gradient-text">Me</span></h2>
         </div>

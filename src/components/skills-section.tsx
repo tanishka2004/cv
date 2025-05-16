@@ -37,7 +37,7 @@ function SkillCard({ skill }: { skill: Skill }) {
 export default function SkillsSection() {
   return (
     <section id="skills" className="py-16 sm:py-24 bg-secondary/30">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="container mx-auto px-6 sm:px-8 lg:px-12">
         <div className="text-center mb-12">
           <h2 className="text-3xl sm:text-4xl font-bold tracking-tight">My <span className="gradient-text">Skills</span></h2>
           <p className="mt-4 text-lg text-muted-foreground max-w-3xl mx-auto">

@@ -1,3 +1,4 @@
+
 import Link from 'next/link';
 import { Github, Linkedin, Mail } from 'lucide-react';
 import { Button } from './ui/button';
@@ -12,7 +13,7 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
   return (
     <footer className="bg-card border-t border-border/50 py-8 text-card-foreground">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <div className="container mx-auto px-6 sm:px-8 lg:px-12 text-center">
         <div className="flex justify-center space-x-4 mb-4">
           {socialLinks.map((link) => (
             <Button key={link.label} variant="ghost" size="icon" asChild className="text-muted-foreground hover:text-primary">

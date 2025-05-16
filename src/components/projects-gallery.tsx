@@ -1,10 +1,11 @@
+
 import { projectsData } from '@/data/projects';
 import ProjectCard from './project-card';
 
 export default function ProjectsGallery() {
   return (
     <section id="projects" className="py-16 sm:py-24 bg-background">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="container mx-auto px-6 sm:px-8 lg:px-12">
         <div className="text-center mb-12">
           <h2 className="text-3xl sm:text-4xl font-bold tracking-tight">My <span className="gradient-text">Creations</span></h2>
           <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">

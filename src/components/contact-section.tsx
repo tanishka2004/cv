@@ -47,6 +47,22 @@ export default function ContactSection() {
         description: state.message,
         variant: "destructive",
       });
+    } else if (state.type === 'error' && typeof state.message === 'object' && state.message !== null) {
+      // Handle field-specific errors if any field has an error message
+      const fieldErrors = Object.values(state.message).flat().filter(msg => typeof msg === 'string');
+      if (fieldErrors.length > 0) {
+         toast({
+           title: "Error",
+           description: "Please check the form for errors.",
+           variant: "destructive",
+         });
+      } else if (typeof state.message === 'string' ) { // Fallback for general string error
+         toast({
+            title: "Error",
+            description: state.message,
+            variant: "destructive",
+         });
+      }
     }
   }, [state, toast]);
 
@@ -59,7 +75,7 @@ export default function ContactSection() {
 
   return (
     <section id="contact" className="py-16 sm:py-24 bg-secondary/30">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="container mx-auto px-6 sm:px-8 lg:px-12">
         <div className="text-center mb-12">
           <h2 className="text-3xl sm:text-4xl font-bold tracking-tight">Get In <span className="gradient-text">Touch</span></h2>
           <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">

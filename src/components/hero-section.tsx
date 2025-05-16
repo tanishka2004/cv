@@ -4,7 +4,7 @@
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { ArrowDown, ChevronRight } from 'lucide-react';
-import { useState, useEffect } from 'react'; // Added for typing animation
+import { useState, useEffect } from 'react'; 
 
 export default function HeroSection() {
   const name = "Tanishka Jain";
@@ -23,7 +23,7 @@ export default function HeroSection() {
   const pauseDuration = 1800; // milliseconds to pause after typing/deleting
 
   useEffect(() => {
-    let timer;
+    let timer: NodeJS.Timeout;
     const handleTyping = () => {
       const fullText = dynamicParts[partIndex];
       if (isDeleting) {
@@ -59,7 +59,7 @@ export default function HeroSection() {
 
 
   return (
-    <section id="hero" className="relative flex flex-col items-center justify-center min-h-screen animated-gradient-bg text-foreground p-4 sm:p-6 lg:p-8 overflow-hidden">
+    <section id="hero" className="relative flex flex-col items-center justify-center min-h-screen animated-gradient-bg text-foreground py-4 sm:py-6 lg:py-8 px-6 sm:px-8 lg:px-12 overflow-hidden">
       <div className="absolute inset-0 bg-black/30 backdrop-blur-sm"></div> {/* Optional: subtle overlay for text readability */}
       <div className="relative z-10 text-center space-y-8">
         <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-extrabold tracking-tight">
@@ -88,7 +88,7 @@ export default function HeroSection() {
         </div>
       </div>
       <div className="absolute bottom-10 left-1/2 -translate-x-1/2 z-10 animate-bounce">
-        <Link href="#about" aria-label="Scroll to about section">
+        <Link href="#about-me" aria-label="Scroll to about section">
           <ArrowDown className="h-8 w-8 text-foreground/70 hover:text-foreground transition-colors" />
         </Link>
       </div>
