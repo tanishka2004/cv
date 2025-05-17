@@ -1,10 +1,11 @@
+
 import type { Project } from '@/types';
 import Image from 'next/image';
 import Link from 'next/link';
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
-import { ExternalLink, Github, LucideIcon } from 'lucide-react';
+import { ExternalLink, Github } from 'lucide-react'; // Removed unused LucideIcon
 
 interface ProjectCardProps {
   project: Project;
@@ -12,7 +13,7 @@ interface ProjectCardProps {
 
 export default function ProjectCard({ project }: ProjectCardProps) {
   return (
-    <Card className="flex flex-col h-full overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 bg-card">
+    <Card className="flex flex-col h-full overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 ease-in-out bg-card hover:-translate-y-1">
       <div className="relative w-full h-48 sm:h-56">
         <Image
           src={project.imageUrl}

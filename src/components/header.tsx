@@ -44,7 +44,7 @@ export default function Header() {
 
           <nav className="hidden md:flex items-center space-x-2 lg:space-x-4">
             {navLinks.map((link) => (
-              <Button key={link.label} variant="ghost" asChild className="text-sm font-medium hover:text-foreground/80">
+              <Button key={link.label} variant="ghost" asChild className="text-sm font-medium hover:text-foreground/80 transition-transform duration-200 ease-in-out hover:-translate-y-px">
                 <Link href={link.href}>{link.label}</Link>
               </Button>
             ))}

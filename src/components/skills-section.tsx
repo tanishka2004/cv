@@ -1,8 +1,8 @@
 
 import { skillsCategorizedData } from '@/data/skills';
-import type { SkillCategory } from '@/types'; // Removed Skill import as SkillCard handles it
+import type { SkillCategory } from '@/types';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import SkillCard from './skill-card'; // Renamed from SkillDisplay to SkillCard for consistency
+import SkillCard from './skill-card';
 
 export default function SkillsSection() {
   return (
@@ -13,7 +13,10 @@ export default function SkillsSection() {
         </div>
         <div className="space-y-10 sm:space-y-12">
           {skillsCategorizedData.map((category: SkillCategory) => (
-            <Card key={category.categoryName} className="bg-card/80 backdrop-blur-sm shadow-xl overflow-hidden">
+            <Card 
+              key={category.categoryName} 
+              className="bg-card/80 backdrop-blur-sm shadow-xl overflow-hidden transition-all duration-300 ease-in-out hover:-translate-y-1 hover:shadow-2xl"
+            >
               <CardHeader className="p-4 sm:p-6 bg-primary/5">
                 <CardTitle className="text-xl sm:text-2xl font-semibold gradient-text text-center md:text-left">{category.categoryName}</CardTitle>
               </CardHeader>
