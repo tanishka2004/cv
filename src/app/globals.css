@@ -5,14 +5,14 @@
 
 @layer base {
   :root {
-    /* New Palette:
+    /* Palette from user:
       #F7CFD8 -> HSL(347, 73%, 89%) - Light Pinkish
       #F4F8D3 -> HSL(71, 69%, 89%) - Pale Yellowish Green
       #A6D6D6 -> HSL(180, 38%, 75%) - Light Teal
       #8E7DBE -> HSL(258, 30%, 62%) - Soft Purple
     */
-    --background: 347 73% 97%; /* Very light pinkish white (Lighter F7CFD8) */
-    --foreground: 258 25% 25%; /* Dark, desaturated purple (Darker 8E7DBE) */
+    --background: 347 73% 97%; /* Very light pinkish white (Lighter F7CFD8 for background) */
+    --foreground: 258 25% 25%; /* Dark, desaturated purple (Darker 8E7DBE for text) */
     
     --card: 0 0% 100%; /* White cards for clean contrast */
     --card-foreground: 258 25% 25%; /* Dark purple text on cards */
@@ -126,4 +126,28 @@
 }
 ::-webkit-scrollbar-thumb:hover {
   @apply bg-primary/80;
+}
+
+/* Global fade-in-up animation */
+@keyframes fade-in-up {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.animate-fade-in-up {
+  animation: fade-in-up 0.5s ease-out forwards;
+  opacity: 0; /* Start hidden */
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+.animate-blink {
+  animation: blink 0.75s step-end infinite;
 }

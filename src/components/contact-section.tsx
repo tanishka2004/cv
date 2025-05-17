@@ -77,12 +77,23 @@ export default function ContactSection() {
     <section id="contact" className="py-16 sm:py-24 bg-secondary/30">
       <div className="container mx-auto px-6 sm:px-8 lg:px-12">
         <div className="text-center mb-12">
-          <h2 className="text-3xl sm:text-4xl font-bold tracking-tight">Get In <span className="gradient-text">Touch</span></h2>
-          <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
+          <h2 
+            className="text-3xl sm:text-4xl font-bold tracking-tight animate-fade-in-up"
+            style={{ animationDelay: '0.1s' }}
+          >
+            Get In <span className="gradient-text">Touch</span>
+          </h2>
+          <p 
+            className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto animate-fade-in-up"
+            style={{ animationDelay: '0.2s' }}
+          >
             Have a project in mind or just want to say hi? Fill out the form below or send me an email.
           </p>
         </div>
-        <div className="max-w-2xl mx-auto">
+        <div 
+          className="max-w-2xl mx-auto animate-fade-in-up"
+          style={{ animationDelay: '0.3s' }}
+        >
           <Card className="shadow-xl">
             <CardHeader>
               <CardTitle className="text-2xl">Send me a message</CardTitle>
@@ -121,7 +132,10 @@ export default function ContactSection() {
             </CardContent>
           </Card>
         </div>
-         <div className="text-center mt-12">
+         <div 
+            className="text-center mt-12 animate-fade-in-up"
+            style={{ animationDelay: '0.4s' }}
+          >
             <p className="text-muted-foreground">Alternatively, you can reach out directly:</p>
             <a href="mailto:tanishkajain.dev@gmail.com" className="text-primary hover:underline font-medium text-lg">
               tanishkajain.dev@gmail.com

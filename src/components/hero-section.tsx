@@ -95,29 +95,7 @@ export default function HeroSection() {
           <ArrowDown className="h-8 w-8 text-foreground/70 hover:text-foreground transition-colors" />
         </Link>
       </div>
-      <style jsx>{`
-        @keyframes fade-in-up {
-          0% {
-            opacity: 0;
-            transform: translateY(20px);
-          }
-          100% {
-            opacity: 1;
-            transform: translateY(0);
-          }
-        }
-        .animate-fade-in-up {
-          animation: fade-in-up 0.5s ease-out forwards;
-          opacity: 0; /* Start hidden */
-        }
-        @keyframes blink {
-          0%, 100% { opacity: 1; }
-          50% { opacity: 0; }
-        }
-        .animate-blink {
-          animation: blink 0.75s step-end infinite;
-        }
-      `}</style>
+      {/* Removed local style jsx for fade-in-up as it's now global */}
     </section>
   );
 }
