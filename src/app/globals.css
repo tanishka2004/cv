@@ -5,59 +5,59 @@
 
 @layer base {
   :root {
-    --background: 0 0% 100%; /* Light mode background */
-    --foreground: 224 71% 10%; /* Light mode foreground - Dark grayish blue */
-    --card: 0 0% 100%;
-    --card-foreground: 224 71% 10%;
+    --background: 30 100% 98%; /* Very light peach/warm off-white */
+    --foreground: 25 30% 25%; /* Dark, warm grayish-brown */
+    --card: 0 0% 100%; /* White cards for clean contrast */
+    --card-foreground: 25 30% 25%;
     --popover: 0 0% 100%;
-    --popover-foreground: 224 71% 10%;
-    --primary: 128 100% 45%; /* Electric Green for light mode */
-    --primary-foreground: 0 0% 100%; /* White text on green */
-    --secondary: 0 0% 96.1%;
-    --secondary-foreground: 224 71% 9%;
-    --muted: 0 0% 96.1%;
-    --muted-foreground: 224 71% 45.1%;
-    --accent: 128 100% 45%; /* Electric Green for light mode */
+    --popover-foreground: 25 30% 25%;
+    --primary: 15 85% 60%; /* Pleasant coral/peach */
+    --primary-foreground: 0 0% 100%; /* White text on primary */
+    --secondary: 30 60% 94%; /* Lighter peach for secondary elements */
+    --secondary-foreground: 25 30% 30%;
+    --muted: 30 60% 94%;
+    --muted-foreground: 25 30% 45%;
+    --accent: 15 85% 60%; /* Coral/peach accent */
     --accent-foreground: 0 0% 100%;
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 0 0% 98%;
-    --border: 0 0% 89.8%;
-    --input: 0 0% 89.8%;
-    --ring: 128 100% 45%; /* Ring matches primary */
+    --destructive: 0 70% 55%; /* Softer red for destructive actions */
+    --destructive-foreground: 0 0% 100%;
+    --border: 30 30% 88%; /* Light warm grey border */
+    --input: 30 30% 92%; /* Slightly darker input background */
+    --ring: 15 85% 60%; /* Ring matches primary */
     --radius: 0.5rem;
 
     --font-sans: "--font-inter", sans-serif;
     --font-heading: "--font-poppins", sans-serif;
 
-    /* Lighter, less saturated gradient for light mode */
-    --gradient-start: 285 80% 70%; 
-    --gradient-end: 180 80% 70%;
+    /* Soft peach/apricot gradient for light mode */
+    --gradient-start: 20 100% 75%; 
+    --gradient-end: 40 100% 80%;
   }
 
   .dark {
-    --background: 224 71% 4%; /* Dark mode background - Very dark blue */
-    --foreground: 210 40% 98%; /* Dark mode foreground - Light grayish blue */
-    --card: 224 71% 6%;
-    --card-foreground: 210 40% 98%;
-    --popover: 224 71% 4%;
-    --popover-foreground: 210 40% 98%;
-    --primary: 128 100% 50%; /* Electric Green for dark mode */
-    --primary-foreground: 224 71% 4%; /* Dark text on green */
-    --secondary: 224 71% 10%;
-    --secondary-foreground: 210 40% 98%;
-    --muted: 224 71% 10%;
-    --muted-foreground: 210 40% 63.9%;
-    --accent: 128 100% 50%; /* Electric Green for dark mode */
-    --accent-foreground: 224 71% 4%;
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 0 0% 98%;
-    --border: 224 71% 15%;
-    --input: 224 71% 15%;
-    --ring: 128 100% 50%; /* Ring matches primary */
+    --background: 25 20% 10%; /* Dark warm brown/grey */
+    --foreground: 30 60% 90%; /* Light warm off-white */
+    --card: 25 20% 12%; /* Slightly lighter card background in dark mode */
+    --card-foreground: 30 60% 90%;
+    --popover: 25 20% 10%;
+    --popover-foreground: 30 60% 90%;
+    --primary: 15 80% 65%; /* Vibrant peach/coral for dark mode */
+    --primary-foreground: 25 20% 10%; /* Dark text on primary */
+    --secondary: 25 20% 20%; /* Darker secondary */
+    --secondary-foreground: 30 60% 85%;
+    --muted: 25 20% 20%;
+    --muted-foreground: 30 60% 65%;
+    --accent: 15 80% 65%; /* Peach/coral accent */
+    --accent-foreground: 25 20% 10%;
+    --destructive: 0 65% 50%; /* Dark mode destructive red */
+    --destructive-foreground: 0 0% 100%;
+    --border: 25 20% 28%; /* Darker border */
+    --input: 25 20% 28%; /* Darker input */
+    --ring: 15 80% 65%; /* Ring matches primary */
 
-    /* Lighter, less saturated gradient for dark mode */
-    --gradient-start: 285 80% 55%;
-    --gradient-end: 180 80% 55%;
+    /* Soft, darker peach/apricot gradient for dark mode */
+    --gradient-start: 20 80% 50%;
+    --gradient-end: 40 80% 55%;
   }
 }
 
