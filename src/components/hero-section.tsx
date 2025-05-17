@@ -58,7 +58,11 @@ export default function HeroSection() {
       <div className="relative z-10 text-center space-y-6 sm:space-y-8">
         <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-extrabold tracking-tight">
           {name.split("").map((char, index) => (
-            <span key={index} className="inline-block animate-fade-in-up" style={{ animationDelay: `${index * 0.05}s` }}>
+            <span 
+              key={index} 
+              className="inline-block animate-fade-in-up" 
+              style={{ animationDelay: `${index * 0.05}s` }}
+            >
               {char === " " ? "\u00A0" : char}
             </span>
           ))}
