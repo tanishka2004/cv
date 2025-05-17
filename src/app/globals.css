@@ -5,59 +5,82 @@
 
 @layer base {
   :root {
-    --background: 30 100% 98%; /* Very light peach/warm off-white */
-    --foreground: 25 30% 25%; /* Dark, warm grayish-brown */
+    /* New Palette:
+      #F7CFD8 -> HSL(347, 73%, 89%) - Light Pinkish
+      #F4F8D3 -> HSL(71, 69%, 89%) - Pale Yellowish Green
+      #A6D6D6 -> HSL(180, 38%, 75%) - Light Teal
+      #8E7DBE -> HSL(258, 30%, 62%) - Soft Purple
+    */
+    --background: 347 73% 97%; /* Very light pinkish white (Lighter F7CFD8) */
+    --foreground: 258 25% 25%; /* Dark, desaturated purple (Darker 8E7DBE) */
+    
     --card: 0 0% 100%; /* White cards for clean contrast */
-    --card-foreground: 25 30% 25%;
-    --popover: 0 0% 100%;
-    --popover-foreground: 25 30% 25%;
-    --primary: 15 85% 60%; /* Pleasant coral/peach */
+    --card-foreground: 258 25% 25%; /* Dark purple text on cards */
+    
+    --popover: 0 0% 100%; /* White popovers */
+    --popover-foreground: 258 25% 25%; /* Dark purple text on popovers */
+    
+    --primary: 180 45% 68%; /* Light Teal (#A6D6D6), slightly vibrant for primary actions */
     --primary-foreground: 0 0% 100%; /* White text on primary */
-    --secondary: 30 60% 94%; /* Lighter peach for secondary elements */
-    --secondary-foreground: 25 30% 30%;
-    --muted: 30 60% 94%;
-    --muted-foreground: 25 30% 45%;
-    --accent: 15 85% 60%; /* Coral/peach accent */
-    --accent-foreground: 0 0% 100%;
-    --destructive: 0 70% 55%; /* Softer red for destructive actions */
+    
+    --secondary: 347 73% 92%; /* Light Pinkish (#F7CFD8) for secondary elements */
+    --secondary-foreground: 258 25% 30%; /* Slightly darker purple for text on secondary */
+    
+    --muted: 71 69% 94%; /* Pale Yellowish Green (#F4F8D3) for muted backgrounds, slightly desaturated */
+    --muted-foreground: 258 25% 45%; /* Muted purple text on muted elements */
+    
+    --accent: 258 35% 70%; /* Soft Purple (#8E7DBE), slightly vibrant for accents */
+    --accent-foreground: 0 0% 100%; /* White text on accent */
+    
+    --destructive: 0 70% 55%; /* Standard red for destructive actions */
     --destructive-foreground: 0 0% 100%;
-    --border: 30 30% 88%; /* Light warm grey border */
-    --input: 30 30% 92%; /* Slightly darker input background */
-    --ring: 15 85% 60%; /* Ring matches primary */
+    
+    --border: 180 30% 88%; /* Light tealish grey border */
+    --input: 71 50% 93%; /* Pale yellow/cream input background, slightly desaturated */
+    --ring: 180 45% 68%; /* Ring matches primary (Light Teal) */
+    
     --radius: 0.5rem;
 
     --font-sans: "--font-inter", sans-serif;
     --font-heading: "--font-poppins", sans-serif;
 
-    /* Soft peach/apricot gradient for light mode */
-    --gradient-start: 20 100% 75%; 
-    --gradient-end: 40 100% 80%;
+    /* Gradient using Light Pinkish and Light Teal */
+    --gradient-start: 347 73% 89%; /* #F7CFD8 */
+    --gradient-end: 180 38% 80%; /* Lighter #A6D6D6 */
   }
 
   .dark {
-    --background: 25 20% 10%; /* Dark warm brown/grey */
-    --foreground: 30 60% 90%; /* Light warm off-white */
-    --card: 25 20% 12%; /* Slightly lighter card background in dark mode */
-    --card-foreground: 30 60% 90%;
-    --popover: 25 20% 10%;
-    --popover-foreground: 30 60% 90%;
-    --primary: 15 80% 65%; /* Vibrant peach/coral for dark mode */
-    --primary-foreground: 25 20% 10%; /* Dark text on primary */
-    --secondary: 25 20% 20%; /* Darker secondary */
-    --secondary-foreground: 30 60% 85%;
-    --muted: 25 20% 20%;
-    --muted-foreground: 30 60% 65%;
-    --accent: 15 80% 65%; /* Peach/coral accent */
-    --accent-foreground: 25 20% 10%;
-    --destructive: 0 65% 50%; /* Dark mode destructive red */
+    --background: 258 15% 12%; /* Dark muted purple (Darker version of 8E7DBE) */
+    --foreground: 71 50% 90%; /* Light pale yellow/cream text (Lighter F4F8D3) */
+    
+    --card: 258 15% 15%; /* Slightly lighter dark purple for cards */
+    --card-foreground: 71 50% 90%;
+    
+    --popover: 258 15% 12%;
+    --popover-foreground: 71 50% 90%;
+    
+    --primary: 180 50% 70%; /* More vibrant Teal (#A6D6D6) for dark mode */
+    --primary-foreground: 258 10% 5%; /* Very dark text on primary */
+    
+    --secondary: 258 15% 20%; /* Darker purple for secondary elements */
+    --secondary-foreground: 71 50% 85%;
+    
+    --muted: 258 15% 22%; /* Dark muted purple for muted backgrounds */
+    --muted-foreground: 71 50% 65%;
+    
+    --accent: 347 60% 75%; /* More vibrant Pinkish (#F7CFD8) for accents in dark mode */
+    --accent-foreground: 258 10% 5%; /* Very dark text on accent */
+    
+    --destructive: 0 65% 55%; /* Standard red for destructive */
     --destructive-foreground: 0 0% 100%;
-    --border: 25 20% 28%; /* Darker border */
-    --input: 25 20% 28%; /* Darker input */
-    --ring: 15 80% 65%; /* Ring matches primary */
+    
+    --border: 258 15% 28%; /* Darker purple border */
+    --input: 258 15% 25%; /* Darker purple input */
+    --ring: 180 50% 70%; /* Ring matches primary (Teal) */
 
-    /* Soft, darker peach/apricot gradient for dark mode */
-    --gradient-start: 20 80% 50%;
-    --gradient-end: 40 80% 55%;
+    /* Gradient for dark mode: Darker Purple to Darker Teal */
+    --gradient-start: 258 30% 45%; /* Darker variant of #8E7DBE */
+    --gradient-end: 180 38% 50%; /* Darker variant of #A6D6D6 */
   }
 }
 
