@@ -5,8 +5,8 @@ import { Button } from './ui/button';
 
 const socialLinks = [
   { label: 'GitHub', href: 'https://github.com/tanishka2004', icon: Github },
-  { label: 'LinkedIn', href: 'https://www.linkedin.com/in/tanishka-jain-1a2b3c4d/', icon: Linkedin }, // Replace with actual LinkedIn
-  { label: 'Email', href: 'mailto:tanishkajain.dev@gmail.com', icon: Mail },
+  { label: 'LinkedIn', href: 'https://www.linkedin.com/in/tanishkajain01/', icon: Linkedin }, // Replace with actual LinkedIn
+  { label: 'Email', href: 'mailto:jtanishka31@gmail.com', icon: Mail },
 ];
 
 export default function Footer() {
@@ -25,9 +25,6 @@ export default function Footer() {
         </div>
         <p className="text-sm text-muted-foreground">
           &copy; {currentYear} Tanishka Jain. All rights reserved.
-        </p>
-        <p className="text-xs text-muted-foreground mt-1">
-          Built with Next.js and Tailwind CSS. Hosted on Firebase.
         </p>
       </div>
     </footer>

@@ -137,8 +137,8 @@ export default function ContactSection() {
             style={{ animationDelay: '0.4s' }}
           >
             <p className="text-muted-foreground">Alternatively, you can reach out directly:</p>
-            <a href="mailto:tanishkajain.dev@gmail.com" className="text-primary hover:underline font-medium text-lg">
-              tanishkajain.dev@gmail.com
+            <a href="mailto:jtanishka31@gmail.com" className="text-primary hover:underline font-medium text-lg">
+              jtanishka31@gmail.com
             </a>
         </div>
       </div>
