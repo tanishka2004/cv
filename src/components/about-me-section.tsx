@@ -1,4 +1,3 @@
-
 import Image from 'next/image';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
@@ -16,22 +15,21 @@ export default function AboutMeSection() {
             About <span className="gradient-text">Me</span>
           </h2>
         </div>
-        <div className="grid md:grid-cols-3 gap-12 items-start">
+        <div className="grid md:grid-cols-3 gap-12 items-center"> {/* Changed items-start to items-center */}
           <div 
-            className="md:col-span-1 flex flex-col items-center md:items-start animate-fade-in-up"
+            className="md:col-span-1 flex flex-col items-center md:items-center justify-center animate-fade-in-up" // changed md:items-start to md:items-center and added justify-center
             style={{ animationDelay: '0.3s' }}
           >
-            <div className="relative w-52 h-72 mb-4 rounded-lg overflow-hidden shadow-lg group">
-              <Image
-                src="https://placehold.co/200x280.png?text=Resume+Preview"
-                alt="Resume Preview"
-                width={200}
-                height={280}
-                className="object-cover group-hover:scale-105 transition-transform duration-300"
-                data-ai-hint="document resume"
+            <div className="relative w-52 h-72 mb-4 rounded-lg overflow-hidden shadow-lg group flex items-center justify-center">
+              <iframe
+                src="/resume.pdf"
+                width="200"
+                height="280"
+                className="rounded-lg"
+                title="Resume Preview"
               />
             </div>
-            <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground shadow-md transform hover:scale-105 transition-transform duration-300">
+            <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground shadow-md transform hover:scale-105 transition-transform duration-300 mt-2">
               <Link href="/resume.pdf" target="_blank" download="Tanishka_Jain_Resume.pdf">
                 <Download className="mr-2 h-5 w-5" />
                 Download Resume
@@ -39,7 +37,7 @@ export default function AboutMeSection() {
             </Button>
           </div>
           <div 
-            className="md:col-span-2 text-muted-foreground text-lg space-y-6 animate-fade-in-up"
+            className="md:col-span-2 text-muted-foreground text-lg space-y-6 animate-fade-in-up flex flex-col justify-center h-full" // added flex, justify-center, h-full
             style={{ animationDelay: '0.5s' }}
           >
             <p 

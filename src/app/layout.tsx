@@ -20,14 +20,14 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: 'DevSpark Portfolio | Tanishka Jain',
+  title: 'Portfolio | Tanishka Jain',
   description: 'Web Developer, Data Analyst Enthusiast & Problem Solver. Explore my projects and skills.',
   openGraph: {
-    title: 'DevSpark Portfolio | Tanishka Jain',
+    title: 'Portfolio | Tanishka Jain',
     description: 'Web Developer, Data Analyst Enthusiast & Problem Solver.',
     images: [
       {
-        url: 'https://placehold.co/1200x630.png?text=Tanishka+Jain+Portfolio', // Replace with actual OG image
+        url: '', // Replace with actual OG image
         width: 1200,
         height: 630,
         alt: 'Tanishka Jain Portfolio',
